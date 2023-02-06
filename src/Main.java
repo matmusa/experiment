@@ -1,9 +1,201 @@
-import java.util.*;
-
-
 public class Main {
+
     public static void main(String[] args) {
-        while (true) {
+
+
+        Country country1 = new Country();
+        country1.setContinent("Central Asia ");
+        country1.setName("Kyrgyzstan");
+        country1.setLanguage("Kyrgyz");
+        country1.setPeople(7000000);
+
+        Country[] country = new Country[]{country1};
+
+        City city1 = new City();
+        city1.setNameOfCity("Bishkek");
+        city1.setRegions(7);
+        city1.setArea(40);
+        city1.setVillage(453);
+        City[] city = new City[]{city1};
+
+        Address address1 = new Address();
+        address1.setNameOfRegion("Chyi");
+        address1.setNameOfArea("Sokuluk");
+        address1.setNameOfStreet("1-may");
+        address1.setNumberOfHome(11);
+
+        Address[] addresses = new Address[]{address1};
+
+        Person person1 = new Person();
+        person1.setFirstName("Matmusa ");
+        person1.setLastName("Abduvokhob uulu");
+        person1.setAge(21);
+        person1.setGender('M');
+
+        Person[] person = new Person[]{person1};
+        for (Country a : country
+        ) {
+            System.out.println("\n Continent  :" + a.getContinent() + " \nName of country  :" + a.getName() + "\nlanguage of country : " + a.getLanguage() + "\n" + a.getPeople() + "  people lives in Kyrgyzstan");
+
+        }
+
+        for (City a : city
+        ) {
+            System.out.println("\n name of city :"+a.getNameOfCity()+"\n quantity of  regions :"+a.getRegions()+"\nquantity of district :"+a.getDistrict()+"\n quantity of villages  :"+a.getVillage());
+
+        }
+
+        for (Address a:addresses
+             ) {
+            System.out.println("\nRegion  :"+a.getNameOfRegion()+"\n district "+a.getNameOfArea()+"\n Street :"+a.getNameOfStreet()+" \nnumber of home "+a.getNumberOfHome());
+
+        }
+        for (Person a:person
+             ) {
+            System.out.println("\n first name :"+a.getFirstName()+"\n last name :"+a.getLastName()+"\n age " +a.getAge()+"\ngender :"+a.getGender());
+
+        }
+
+
+
+
+
+    }
+}
+
+
+//            Person person = new Person();
+//            person.firstName = " Matmusa ";
+//            person.lastName = "Tashtanov";
+//            person.localDate = LocalDate.of(2001, 10, 12);
+//            person.gender = 'M';
+//
+//            Person person2 = new Person();
+//            person2.firstName = " Bahtiyar ";
+//            person2.lastName = "Borubai uulu";
+//            person2.localDate = LocalDate.of(2003, 11, 24);
+//            person2.gender = 'M';
+//
+//
+//            Wallet wallet = new Wallet();
+//            wallet.walletMoney = 1000;
+//            wallet.card = 1000;
+//            Scanner scanner = new Scanner(System.in);
+//            System.out.println("\n vyberite operatsy " +
+//                              "\n * vyvod deneg iz koshelka" +
+//                              "\n @ vyvod deneg iz elektronnogo kashelka" +
+//                              "\n #  popolnenie ");
+//            char Money = scanner.next().charAt(0);
+//        System.out.println("\nnapishite suumu:");
+//
+//            if (Money == '*') {
+//                wallet.payInCash(scanner.nextInt());
+//
+//        }else if (Money=='@') {
+//                wallet.payWithCard(scanner.nextInt());
+//            }else {wallet.addMoneyToCard(scanner.nextInt());}
+//
+//                System.out.println( wallet.walletMoney +" or"+
+//                wallet.card );
+//        }
+//    }
+//
+//
+//
+
+
+
+
+
+
+
+
+
+
+
+
+        /*
+        Company company =new Company();
+        company.companyName="Peaksoft House";
+        company.country="Kyrgyzstan";
+        company.yearOfFondation=2022;
+
+        Group group = new Group();
+        group.groupName = "Java";
+        group.startDate = 2022;
+
+        Group group2 = new Group();
+        group2.groupName = "Js";
+        group2.startDate = 2022;
+
+        Group[] groups = new Group[]{group2, group};
+        company.group = groups;
+
+        for (int i = 0; i < company.group.length; i++) {
+            System.out.println(company.group[i].groupName);
+            System.out.println(company.group[i].startDate);
+        }
+
+        company.person.firstName="Stive ";
+        company.person.lastName="Djobs";
+        company.person.age=21;
+
+        System.out.println("\nName of company :"+company.companyName+
+        "\nCountry"+company.country+
+        "\nyear of foundation"+company.yearOfFondation+
+                "\n name of  group"+company.group
+               );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//        Person person=new Person();
+//        person.setFirstName("Matmusa");
+//        person.setLastName("Tashtanov");
+//        person.setAge(21);
+//        person.setProfession("Dreamer");
+//        person.setGender('M');
+//
+//        System.out.println(" \nAty:"+person.getFirstName()+
+//                            "\nfamialyisy :"+person.getLastName()+
+//                            "\nJashy :"+person.getAge()+
+//                            "\n jynysy :" +person.getGender()+
+//                       b      "\nProfesiasy :"+person.getProfession());
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+        /*while (true) {
             Account men = new Account();
             Account Mom = new Account();
             Account Sister = new Account();
@@ -178,7 +370,7 @@ public class Main {
 //                "\nyear of issue  :" + car.year +
 //                "\ncolor of car  :" + car.color);
 //
-
+*/
 
 
 
