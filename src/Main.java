@@ -1,9 +1,141 @@
+import java.sql.SQLOutput;
+import java.time.LocalDate;
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
 
+        Person person = new Person();
+        Person person1 = new Person();
+        Person person2 = new Person();
+        Person person3 = new Person();
+        Person person4 = new Person();
 
-        Country country1 = new Country();
+        Phone phone = new Phone("Apple", "13 pro", "12");
+        Phone phone1 = new Phone("Apple", "13 pro", "12");
+        Phone phone2 = new Phone("Apple", "13 pro", "12");
+        Phone phone3 = new Phone("Apple", "13 pro", "12");
+        Phone phone4 = new Phone("Apple", "13 pro", "12");
+
+
+        person.setPhone(phone);
+        person.setFirstName("Matmusa");
+        person.setWork("Programist");
+        person.setSalary(120000);
+        person.setAge(21);
+        person.getPhone().setPrice(12999);
+
+        person1.setPhone(phone1);
+        person1.setFirstName("Ruslan");
+        person1.setWork("Programist");
+        person1.setSalary(100000);
+        person1.setAge(21);
+        person1.getPhone().setPrice(80000);
+
+        person2.setPhone(phone2);
+        person2.setFirstName("Abdumomun");
+        person2.setWork("Programist");
+        person2.setSalary(1110000);
+        person2.setAge(20);
+        person2.setPhone(phone);
+        person2.getPhone().setPrice(12122);
+
+
+        person3.setPhone(phone3);
+        person3.setFirstName("Manas");
+        person3.setWork("Programist");
+        person3.setSalary(125000);
+        person3.setAge(21);
+        person3.getPhone().setPrice(19999);
+
+
+        person4.setPhone(phone4);
+        person4.setFirstName("Bakyt");
+        person4.setWork("Broker");
+        person4.setSalary(90000);
+        person4.setAge(26);
+        person4.getPhone().setPrice(15999);
+
+        Person[] people = {person, person1, person2, person3, person4,};
+        for (Person a : people
+        ) {
+            System.out.println("\nnames  :" + a.getFirstName() + "\n work  :" + a.getWork() + "\nsalary :" + a.getSalary() + " \n age :" + a.getAge() + "\n price of phone " + a.getPhone().getPrice());
+
+        }
+        int[] salaries = {person.getSalary(), person1.getSalary(), person2.getSalary(), person3.getSalary(), person4.getSalary()};
+
+       Arrays.sort(salaries);
+
+
+        System.out.println("min :"+salaries[0]);
+        System.out.println("max :"+salaries[salaries.length-1]);
+
+int []phones={person.getPhone().getPrice(),person1.getPhone().getPrice(),person2.getPhone().getPrice(),person3.getPhone().getPrice(),person4.getPhone().getPrice()};
+
+
+Arrays.sort(phones);
+        System.out.println("\nmax price :"+phones[phones.length-1]);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Phone phone=new Phone("Mi","13pro","16");
+
+       phone.setMemory(256);
+       phone.setPrice(700);
+        System.out.println("\nBrand :"+phone.getBrand()+
+        "\nversion  :"+phone.getVersion()+
+        "\nscreem :"+phone.getScreem()+
+        "\nMemory  :"+phone.getMemory()+
+                "\nptice :"+phone.getPrice());
+    }
+}
+   /* Students student6 = new Students();
+
+
+    Student student1 = new Student("Matmusa ", LocalDate.of(2001, 10, 12), 02333444334, "kyrgyz");
+    Student student2 = new Student("Ruslan ", LocalDate.of(2002, 04, 12), 02333444555, "kyrgyz");
+    Student student3 = new Student("Abdumomun", LocalDate.of(2005, 07, 15), 0233344443, "kyrgyz");
+    Student student4 = new Student("Samat ", LocalDate.of(2001, 11, 12), 02333445454, "kyrgyz");
+    Student student5 = new Student("Murat ", LocalDate.of(2000, 9, 11), 02333444464, "kyrgyz");
+
+    Student[] student = {student1, student2, student3, student4, student5};
+        for(Student s:student
+                ){
+                System.out.println("\nnames of studants  :"+s.getFirsName()+
+                "\n student ages "+s.getLocalDate()
+                +"\nstudent phone number  :"+s.getPhoneNumber()+
+                "\nstudents nationality  :"+s.getNationality());
+
+                }
+
+
+                }
+                }
+
+
+//Triangle triangle=new Triangle(12,12, 12);
+//
+//        System.out.println(( "S="+(triangle.getA()* triangle.getB())/2));
+//
+
+
+
+
+
+     /*   Country country1 = new Country();
         country1.setContinent("Central Asia ");
         country1.setName("Kyrgyzstan");
         country1.setLanguage("Kyrgyz");
